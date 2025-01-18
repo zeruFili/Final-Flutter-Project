@@ -36,7 +36,10 @@ dependencies:
   cupertino_icons: ^1.0.8
   http: ^1.2.2
   image_picker: ^1.1.2
+<<<<<<< HEAD
   get: ^4.6.6
+=======
+>>>>>>> origin/image-uploader
 
 dev_dependencies:
   flutter_test:

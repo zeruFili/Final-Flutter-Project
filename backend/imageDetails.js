@@ -9,4 +9,8 @@ const ImageDetailsScehma = new mongoose.Schema(
   }
 );
 
+<<<<<<< HEAD
 mongoose.model("ImageDetails", ImageDetailsScehma);
+=======
+mongoose.model("ImageDetails", ImageDetailsScehma);
+>>>>>>> origin/image-uploader

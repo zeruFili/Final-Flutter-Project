@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'utils/api_endpoints.dart';
-import 'screens/image_upolad.dart'; // Import the image uploader
-import 'screens/image_view.dart'; // Import the image view
-=======
-import 'dart:convert';
-import 'dart:typed_data';
-import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:http/http.dart' as http;
->>>>>>> origin/image-uploader
+import 'dart:convert';
+import 'dart:typed_data';
+import 'screens/image_upolad.dart'; // Note: Fixed typo here
+import 'screens/image_view.dart'; // Import the image view
 
 void main() {
   runApp(MyApp());
@@ -19,7 +15,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
     return GetMaterialApp(
       title: 'GetX Navigation',
       initialRoute: '/get-image', // Start with the image view
@@ -29,12 +24,7 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: '/upload-image',
             page: () => ImageUploader()), // Image Uploader route
-        // HomeScreen route
       ],
-=======
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ImageUploader(),
     );
   }
 }
@@ -55,7 +45,6 @@ class _ImageUploaderState extends State<ImageUploader> {
     fetchImages(); // Fetch images upon initialization
   }
 
-  /// Fetch images from the server
   Future<void> fetchImages() async {
     try {
       final response =
@@ -74,7 +63,6 @@ class _ImageUploaderState extends State<ImageUploader> {
     }
   }
 
-  /// Pick an image using the Image Picker plugin
   Future<void> pickImage() async {
     final picker = ImagePicker();
     final pickedFile = await picker.pickImage(source: ImageSource.gallery);
@@ -88,7 +76,6 @@ class _ImageUploaderState extends State<ImageUploader> {
     }
   }
 
-  /// Upload the selected image to the server
   Future<void> uploadImage() async {
     if (_selectedImageBytes == null || _selectedImageName == null) return;
 
@@ -175,7 +162,6 @@ class _ImageUploaderState extends State<ImageUploader> {
           ],
         ),
       ),
->>>>>>> origin/image-uploader
     );
   }
 }
